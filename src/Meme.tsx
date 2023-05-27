@@ -13,7 +13,7 @@ const memes = [
 const Meme: React.FC = () => {
   const today = new Date();
   const day = today.toLocaleDateString('en-US', { weekday: 'long' });
-  const dayIndex = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'].indexOf(day);
+  const dayIndex = ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday'].indexOf(day);
   const meme = memes[dayIndex];
 
   return (
