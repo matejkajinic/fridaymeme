@@ -20,7 +20,7 @@ const App: React.FC = () => {
 
   const checkIfFriday = () => {
     const today = new Date();
-    setIsFriday(today.getDay() === 5);
+    setIsFriday(today.getDay() === 6);
   };
 
   const openModal = () => {
@@ -35,7 +35,7 @@ const App: React.FC = () => {
     <div className="App" style={{ backgroundColor: 'black', color: 'white', fontFamily: 'Roboto', fontSize: '2em' }}>
       <div>
         {isFriday ? (
-          <div style={{ width: '100%', height: '0', paddingBottom: '157%', position: 'relative' }} onClick={openModal}>
+          <div style={{ width: '20em', height: '100%', paddingBottom: '157%', position: 'relative' }} onClick={openModal}>
             <iframe src="https://giphy.com/embed/JmVcakKIdojgpBC2iw" width="100%" height="100%" style={{ position: 'absolute' }} frameBorder="0" className="giphy-embed" allowFullScreen></iframe>
           </div>
         ) : (
