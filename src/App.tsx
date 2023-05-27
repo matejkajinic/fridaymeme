@@ -20,22 +20,14 @@ const App: React.FC = () => {
 
   const checkIfFriday = () => {
     const today = new Date();
-    setIsFriday(today.getDay() === 6);
-  };
-
-  const openModal = () => {
-    setModalIsOpen(true);
-  };
-
-  const closeModal = () => {
-    setModalIsOpen(false);
+    setIsFriday(today.getDay() === 5);
   };
 
   return (
     <div className="App" style={{ backgroundColor: 'black', color: 'white', fontFamily: 'Roboto', fontSize: '2em' }}>
       <div>
         {isFriday ? (
-          <div style={{ width: '20em', height: 'auto', paddingBottom: '157%', position: 'relative' }} onClick={openModal}>
+          <div style={{ width: '15em', height: 'auto', paddingBottom: '157%', position: 'relative' }}>
             <iframe src="https://giphy.com/embed/JmVcakKIdojgpBC2iw" width="100%" height="100%" style={{ position: 'absolute' }} frameBorder="0" className="giphy-embed" allowFullScreen></iframe>
           </div>
         ) : (
@@ -48,10 +40,6 @@ const App: React.FC = () => {
       <div>
         <Meme />
       </div>
-      <Modal isOpen={modalIsOpen} onRequestClose={closeModal} contentLabel="Mufasa Dance Video">
-        <button onClick={closeModal}>Close</button>
-        <iframe width="560" height="315" src="https://www.youtube.com/embed/U6n2NcJ7rLc" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>
-      </Modal>
     </div>
   );
 };
