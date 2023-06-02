@@ -8,7 +8,6 @@ Modal.setAppElement('#root');
 
 const App: React.FC = () => {
   const [isFriday, setIsFriday] = useState<boolean>(false);
-  const [modalIsOpen, setModalIsOpen] = useState<boolean>(false);
 
   useEffect(() => {
     checkIfFriday();
@@ -35,10 +34,10 @@ const App: React.FC = () => {
         )}
       </div>
       <div>
-        <Countdown />
+        { !isFriday ? (<Countdown />) : (<div></div>)}
       </div>
       <div>
-        <Meme />
+        { !isFriday ? (<Meme />) : (<div></div>)}
       </div>
     </div>
   );
